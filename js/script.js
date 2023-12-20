@@ -20,3 +20,7 @@ const swiper = new Swiper('.swiper', {
     disableOnInteraction: false, // 矢印をクリックしても自動再生を止めない
   },
 });
+const box = new Swiper('.boxes', {
+  loop: true,
+  slidesPerView: 1.2,
+});

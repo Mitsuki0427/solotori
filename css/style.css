@@ -318,6 +318,9 @@ label.tab {
   background-color: #fbd7e3; /* タブの(非選択状態の)背景色：灰色 */
   font-size: 13px;
 }
+label.tab input {
+  display: none;
+}
 
 /* ▼タブにマウスポインタが載った際の装飾 */
 label.tab:hover {
@@ -399,4 +402,7 @@ label:checked + .tab {
   right: 0;
   background: #fefcfd;
   opacity: 0.75;
+}
+.box_swiper {
+  transition-timing-function: linear;
 }
