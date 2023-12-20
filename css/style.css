@@ -1,0 +1,402 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 100%;
+}
+body {
+  font-family: 'Kaisei Opti', serif;
+  font-family: 'Zen Maru Gothic', serif;
+  background-color: #fefcfd;
+  color: #624848;
+}
+.header-area {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  height: 65px;
+  padding: 0 20px;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: #fefcfd;
+  position: fixed;
+  width: 100vw;
+}
+.header-area img {
+  padding-top: 6px;
+}
+
+.header-area ul {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  justify-content: center;
+  padding-left: 0;
+}
+.header-area li {
+  list-style: none;
+}
+/* ハンバーガーメニュー */
+.hbg-menu-btn {
+  content: 'menu';
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid black;
+  z-index: 4;
+  margin: 0 0 0 15px;
+}
+
+.hbg-menu-btn::before,
+.hbg-menu-btn::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 2px;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+}
+.menu {
+  font-size: 8px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 27px;
+  color: #000000;
+  font-weight: bold;
+}
+.hbg-menu-btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+}
+.hbg-menu-btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+  opacity: 0;
+}
+.menu-active::before {
+  opacity: 1;
+}
+.menu-active::after {
+  opacity: 1;
+}
+.active-menu {
+  opacity: 0;
+}
+.slide-menu {
+  background-color: #feebf1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 3;
+  transform: translateX(-100%);
+}
+.slide-menu li {
+  background-color: #fefcfd;
+  color: #fff;
+  line-height: 400%;
+  text-align: center;
+  list-style: none;
+  padding: 25px 70px;
+}
+.slide-menu div {
+  padding: 110px 20px;
+}
+
+.slide-menu-active {
+  transform: translateX(0);
+}
+/* ファーストビュー */
+
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+/* スライドの動き等速 */
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+section.fv {
+  position: relative;
+  height: 785px;
+  top: 65px;
+}
+.swiper {
+  top: -65px;
+  background-color: #feebf1;
+}
+h2.fv {
+  top: 373px;
+  left: 80px;
+  position: absolute;
+  text-align: center;
+  z-index: 2;
+}
+img.hukidashi {
+  position: absolute;
+  z-index: 1;
+  text-align: center;
+  top: 219px;
+}
+section.fv a {
+  position: absolute;
+  bottom: 20px;
+  background: #aef0ff;
+  height: 122px;
+  width: 122px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 122px;
+  right: 20px;
+  z-index: 1;
+  color: #000000;
+}
+section.about {
+  margin: 128px 25px;
+}
+section.about h2 {
+  padding-bottom: 50px;
+  font-weight: bold;
+  color: #000000;
+}
+p.about {
+  margin-bottom: 15px;
+}
+section.about h3 {
+  margin-top: 30px;
+  text-align: center;
+  color: #000000;
+}
+.box {
+  padding: 10px 32px 30px;
+  margin: 20px 20px;
+
+  border: solid 2px #fbd7e3; /*線*/
+  border-radius: 10px; /*角の丸み*/
+  text-align: center;
+}
+.box h4 {
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
+.box p {
+  text-align: left;
+  width: 240px;
+}
+.explanation {
+  background-color: #feebf1;
+  padding: 50px 25px 150px 25px;
+}
+.explanation h2 {
+  color: #000000;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+.explanation h3 {
+  position: relative;
+  left: -35px;
+  top: -50px;
+}
+.explanation p {
+  margin-bottom: 68px;
+}
+.htu {
+  background-color: #fefcfd;
+  padding: 20px 20px 50px 20px;
+  margin-bottom: 30px;
+}
+.flex {
+  display: flex;
+}
+.flex img {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+  height: auto;
+}
+.flex-txt {
+  margin: 10px 0 0 27px;
+
+  padding: 0;
+}
+.flex-txt h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.flex-txt p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+.htu .arrow {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 25px 0;
+}
+.flex-left {
+  margin: 10px 20px 0 0;
+  padding: 0;
+}
+.flex-left h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.flex-left p {
+  margin: 10px 0 0;
+  padding: 0;
+}
+img.air {
+  margin: 30px 0 0 0;
+}
+img.tag {
+  width: 31%;
+  height: auto;
+  margin: 5px 28px 5px 21px;
+}
+.htu h4 {
+  font-family: 'Caveat';
+  font-size: 24px;
+}
+a.htu {
+  position: absolute;
+  width: 270px;
+  height: 80px;
+  background-color: #aef0ff;
+  text-align: center;
+  line-height: 40px;
+  margin: 10px 36px;
+  border-radius: 10px;
+}
+
+.instagram {
+  margin: 70px 20px 50px;
+}
+.instagram p {
+  text-align: center;
+  padding: 50px 20px;
+  font-weight: bold;
+}
+.instagram .arrow {
+  display: block;
+  margin: auto;
+  text-align: center;
+  padding: 25px 0;
+}
+.instagram .story {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+footer {
+  text-align: center;
+  margin: 40px 20px;
+}
+div.tab {
+  margin-top: 72px;
+  margin-left: 32px;
+}
+label.tab {
+  display: inline-block; /* インラインブロック化 */
+  border-radius: 0.75em 0.75em 0px 0px; /* 左上と右上の角だけを丸くする */
+  padding: 5px; /* 内側の余白量 */
+  font-weight: bold; /* タブの文字を太字にする */
+  color: black; /* タブの文字色：黒色 */
+  background-color: #fbd7e3; /* タブの(非選択状態の)背景色：灰色 */
+  font-size: 13px;
+}
+
+/* ▼タブにマウスポインタが載った際の装飾 */
+label.tab:hover {
+  color: green; /* タブの文字色：緑色 */
+  background-color: #fbd7e3; /* タブの背景色：淡い緑色 */
+  cursor: pointer; /* マウスポインタの形状を「指(指し示す形)」にする */
+}
+
+/* ▼選択状態のタブ(＝チェックが入っているラジオボタンの隣にあるタブの装飾) */
+label:checked + .tab {
+  color: #624848; /* タブの文字色：赤色 */
+  background-color: #f8c1d4; /* タブの背景色：淡い黄色 */
+}
+.page {
+  width: 337px;
+  height: 716px;
+  padding: 10px 18px 30px;
+  margin: 0 auto 50px;
+  background-color: #fefcfd;
+  border: solid 2px #fbd7e3; /*線*/
+  position: relative;
+}
+.photo {
+  display: flex;
+}
+.page h2 {
+  text-align: center;
+  margin: 10px;
+}
+.page span {
+  color: #cb828d;
+}
+.bg {
+  background-image: linear-gradient(0deg, transparent 31px, #333 32px),
+    linear-gradient(90deg, transparent 31px, #cb828d 32px);
+  background-color: #f8c1d4;
+  background-size: 32px 32px;
+}
+.subtitle {
+  text-align: center;
+}
+.page input {
+}
+.page p {
+  font-size: 14px;
+  line-height: 24px;
+}
+.cp_iptxt {
+  position: relative;
+  width: 80%;
+  margin: 40px 3%;
+}
+.cp_iptxt input[type='text'] {
+  font: 15px/24px sans-serif;
+  box-sizing: border-box;
+  width: 60px;
+  padding: 0.3em;
+  transition: 0.3s;
+  letter-spacing: 1px;
+  color: #aaaaaa;
+  border: none;
+  border-bottom: 1px solid #1b2538;
+  background: transparent;
+  display: inline;
+}
+.ef input[type='text']:focus {
+  border-bottom: 2px solid #da3c41;
+  outline: none;
+}
+.tripflex {
+  display: flex;
+  margin-bottom: 3px;
+}
+.op {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fefcfd;
+  opacity: 0.75;
+}
