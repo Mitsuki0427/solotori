@@ -9,16 +9,21 @@
       href="https://fonts.googleapis.com/css2?family=Kaisei+Opti:wght@500&family=Zen+Maru+Gothic:wght@300&display=swap"
       rel="stylesheet"
     />
-    <script
-      src="https://code.jquery.com/jquery-3.4.1.min.js"
-      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"
-    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="../css/style.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
+
     <script src="../js/script.js" defer></script>
     <title>profile</title>
   </head>
-  <body class="bg">
+  <body>
     <header class="header-area">
       <h1><img src="../img/sorotorilogo.svg" alt="sorotori" /></h1>
       <nav>
@@ -35,242 +40,259 @@
         </ul>
         <ul class="slide-menu">
           <div class="white">
-            <li><a href="#section1">ソロトリって…？</a></li>
-            <li><a href="#section2">ソロトリ×プロフ帳</a></li>
-            <li><a href="#">プロフ帳の新規作成</a></li>
-            <li><a href="#">マイプロフ帳</a></li>
-            <li><a href="#">ソロトリページ</a></li>
-            <li><a href="#">みんなのソロトリ</a></li>
+            <li class="ham-text">
+              <a href="../index.html#section1">ソロトリって…？</a>
+            </li>
+            <li class="ham-text"><a href="#section2">ソロトリ×プロフ帳</a></li>
+            <li class="ham-text"><a href="#">プロフ帳の新規作成</a></li>
+            <li class="ham-text"><a href="#">マイプロフ帳</a></li>
+            <li class="ham-text"><a href="#">ソロトリページ</a></li>
+            <li class="ham-text"><a href="#">みんなのソロトリ</a></li>
           </div>
         </ul>
       </nav>
     </header>
-    <main>
-      <div class="tab">
-        <label class="tab">
-          <input type="radio" name="myprofile" checked />
-          マイプロフ
-        </label>
-        <label class="tab">
-          <input type="radio" name="solotori" checked />
-          ソロトリ
-        </label>
-        <label class="tab">
-          <input type="radio" name="oursolotori" checked />
-          みんなのソロトリ
-        </label>
-      </div>
-      <div class="page">
-        <div>
-          <h2>ベストリ</h2>
-          <p class="subtitle">~私のBestTrip~</p>
-          <p>
-            わたしが思い出に残っているソロトリは,
-            <span>箱根の温泉旅</span>です。<br />
-            この旅で話したいことは
-            <span>初めて一人でいることが贅沢だと感じた</span>こと！<br />
-            そして写真で伝えたいベストリはこれ！
-          </p>
-          <div class="photo"></div>
-          <img src="../img/ship.jpg" alt="箱根遊覧船が港についている様子" />
-          <img
-            src="../img/cookingmenu.jpg"
-            alt="箱根の和食屋での手書きメニュー"
-          />
-          <img src="../img/hotel.jpg" alt="箱根のホテル" />
-          <p>興味があればソロトリページでも見てみてね♪</p>
+    <main class="profile-main">
+      <div class="bg">
+        <div class="tab">
+          <label class="tab-btn active-btn" data-slide="0">
+            <input type="radio" name="myprofile" checked />
+            マイプロフ
+          </label>
+          <label class="tab-btn" data-slide="1">
+            <input type="radio" name="solotori" checked />
+            ソロトリ
+          </label>
+          <label class="tab-btn" data-slide="2">
+            <input type="radio" name="oursolotori" checked />
+            みんなのソロトリ
+          </label>
         </div>
-        <div>
-          <h2>私のすきなもの</h2>
-          <p>食べ物:海鮮丼、ラーメン</p>
-          <p>趣味:カフェ巡り、SNS</p>
-          <p>推し：いない</p>
-        </div>
-        <div>
-          <h2>私について</h2>
-          <p>
-            私の名前は<span>みな</span>です。<br />
-            <span>関東</span>に住んでいて、年齢は<span>10代</span>です。<br />
-            普段は<span>学生</span>をしています！<br />
-            わたしの性格は<span>フレンドリー</span>だと思います。<br />
-            休みの日は<span>ショッピングやカフェ巡りをする</span>ことが多いです。<br />
-            マイブームは<span>スマホゲームをする</span>ことです。
-          </p>
-        </div>
-      </div>
-      <div>
-        <div>
-          <form>
-            <div class="page">
-              <div class="op"></div>
-              <h2>ソロトリ</h2>
-              <div class="cp_iptxt">
+        <div class="p_swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="page">
+                <h2 id="section3">ベストリ</h2>
+                <p class="subtitle">~私のBestTrip~</p>
                 <p>
-                  今回わたしが<label class="ef"
-                    ><input
-                      type="text"
-                      id=""
-                      name=""
-                      placeholder="日付" /></label
-                  >に
-                  <label class="ef"
-                    ><input
-                      type="text"
-                      id=""
-                      name=""
-                      placeholder="〇泊or日帰り" /></label
-                  >で行った場所は
-                  <label class="ef"
-                    ><input
-                      type="text"
-                      id=""
-                      name=""
-                      placeholder="どこ" /></label
-                  >です。 行こうと思ったきっかけは
-                  <label class="ef"
-                    ><input
-                      type="text"
-                      id=""
-                      name=""
-                      placeholder="○○をしたい" /></label
-                  >と思ったから！
+                  わたしが思い出に残っているソロトリは,
+                  <span>箱根の温泉旅</span>です。<br />
+                  この旅で話したいことは
+                  <span>初めて一人でいることが贅沢だと感じた</span>こと！<br />
+                  そして写真で伝えたいベストリはこれ！
                 </p>
-              </div>
-              <div>
-                <h2>今回の旅のいろいろ</h2>
-                <div class="tripflex">
-                  <!-- <input type="file" id="" name="" accept="image/*" /> -->
-                  <img src="../img/pink.png" alt="" />
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    placeholder="写真の説明を書いてね"
+                <div class="photo">
+                  <img
+                    src="../img/ship.jpg"
+                    alt="箱根遊覧船が港についている様子"
                   />
-                </div>
-                <div class="tripflex">
-                  <!-- <input type="file" id="" name="" accept="image/*" /> -->
-                  <img src="../img/pink.png" alt="" />
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    placeholder="写真の説明を書いてね"
+                  <img
+                    src="../img/cookingmenu.jpg"
+                    alt="箱根の和食屋での手書きメニュー"
                   />
+                  <img src="../img/hotel.jpg" alt="箱根のホテル" />
                 </div>
-                <div class="tripflex">
-                  <!-- <input type="file" id="" name="" accept="image/*" /> -->
-                  <img src="../img/pink.png" alt="" />
-                  <input
-                    type="text"
-                    id=""
-                    name=""
-                    placeholder="写真の説明を書いてね"
-                  />
+                <p>興味があればソロトリページでも見てみてね♪</p>
+                <div>
+                  <h2>私のすきなもの</h2>
+                  <p>食べ物:海鮮丼、ラーメン</p>
+                  <p>趣味:カフェ巡り、SNS</p>
+                  <p>推し：いない</p>
                 </div>
-              </div>
-              <div>
-                <h2>みんなに共有ポイント</h2>
-                <input
-                  type="text"
-                  id=""
-                  name=""
-                  placeholder="共有したいことを書いてね"
-                />
+                <div>
+                  <h2>私について</h2>
+                  <p>
+                    私の名前は<span>みな</span>です。<br />
+                    <span>関東</span
+                    >に住んでいて、年齢は<span>10代</span>です。<br />
+                    普段は<span>学生</span>をしています！<br />
+                    わたしの性格は<span>フレンドリー</span>だと思います。<br />
+                    休みの日は<span>ショッピングやカフェ巡りをする</span>ことが多いです。<br />
+                    マイブームは<span>スマホゲームをする</span>ことです。
+                  </p>
+                </div>
               </div>
             </div>
-            <button>投稿</button>
-          </form>
-          <button>新規作成</button>
-        </div>
-      </div>
-      <div>
-        <div class="page">
-          <h2>ソロトリ</h2>
-          <p>
-            今回わたしが<span>８月</span>に<span>日帰り</span>で行った場所は<br />
-            <span>宮城県仙台市</span>です。<br />
-            行こうと思ったきっかけは<br />
-            <span>本場の牛タンが食べたいと思った</span>から！
-          </p>
+            <div class="swiper-slide">
+              <div class="page">
+                <form>
+                  <div>
+                    <div class="op"></div>
+                    <h2 id="section4">ソロトリ</h2>
+                    <div class="cp_iptxt">
+                      <p>
+                        今回わたしが<label class="ef"
+                          ><input
+                            type="text"
+                            id=""
+                            name=""
+                            placeholder="日付" /></label
+                        >に
+                        <label class="ef"
+                          ><input
+                            type="text"
+                            id=""
+                            name=""
+                            placeholder="〇泊or日帰り" /></label
+                        >で行った場所は
+                        <label class="ef"
+                          ><input
+                            type="text"
+                            id=""
+                            name=""
+                            placeholder="どこ" /></label
+                        >です。 行こうと思ったきっかけは
+                        <label class="ef"
+                          ><input
+                            type="text"
+                            id=""
+                            name=""
+                            placeholder="○○をしたい" /></label
+                        >と思ったから！
+                      </p>
+                    </div>
+                    <div>
+                      <h2>今回の旅のいろいろ</h2>
+                      <div class="tripflex">
+                        <!-- <input type="file" id="" name="" accept="image/*" /> -->
+                        <img src="../img/pink.png" alt="" />
+                        <input
+                          type="text"
+                          id=""
+                          name=""
+                          placeholder="写真の説明を書いてね"
+                        />
+                      </div>
+                      <div class="tripflex">
+                        <!-- <input type="file" id="" name="" accept="image/*" /> -->
+                        <img src="../img/pink.png" alt="" />
+                        <input
+                          type="text"
+                          id=""
+                          name=""
+                          placeholder="写真の説明を書いてね"
+                        />
+                      </div>
+                      <div class="tripflex">
+                        <!-- <input type="file" id="" name="" accept="image/*" /> -->
+                        <img src="../img/pink.png" alt="" />
+                        <input
+                          type="text"
+                          id=""
+                          name=""
+                          placeholder="写真の説明を書いてね"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h2>みんなに共有ポイント</h2>
+                      <input
+                        type="text"
+                        id=""
+                        name=""
+                        placeholder="共有したいことを書いてね"
+                      />
+                    </div>
+                  </div>
+                  <button>投稿</button>
+                </form>
+              </div>
+              <button class="new-create">新規作成</button>
+            </div>
+            <div class="swiper-slide">
+              <div class="page">
+                <h2>ソロトリ</h2>
+                <p>
+                  今回わたしが<span>８月</span>に<span>日帰り</span>で行った場所は<br />
+                  <span>宮城県仙台市</span>です。<br />
+                  行こうと思ったきっかけは<br />
+                  <span>本場の牛タンが食べたいと思った</span>から！
+                </p>
 
-          <div>
-            <h2>今回の旅のいろいろ</h2>
-            <div class="tripflex">
-              <img src="../img/trip_bus.jpg" alt="夜行バス" />
-              <p>
-                交通手段は夜行バスにしました。<br />
-                眠れたけど起きたら体が がちがち・・・
-              </p>
+                <div>
+                  <h2 class="trip">今回の旅のいろいろ</h2>
+                  <div class="tripflex">
+                    <img src="../img/trip_bus.jpg" alt="夜行バス" />
+                    <p>
+                      交通手段は夜行バスにしました。<br />
+                      眠れたけど起きたら体が がちがち・・・
+                    </p>
+                  </div>
+                  <div class="tripflex">
+                    <img src="../img/zunda.jpg" alt="ずんだシェイクの写真" />
+                    <p>
+                      初めてずんだシェイクをのんでみました。<br />
+                      意外と甘めでおいしかった！結構並んだ
+                    </p>
+                  </div>
+                  <div class="tripflex">
+                    <img src="../img/gyutan.jpg" alt="牛タンの写真" />
+                    <p>
+                      念願の本場の牛タン！<br />
+                      行くまでの過程もあってか めちゃめちゃ美味しかった！！！
+                    </p>
+                  </div>
+                  <div>
+                    <h2>みんなに共有ポイント</h2>
+                    <p>
+                      夜行バスは3列独立シートならストレスが少ないと思います！夏の仙台は普通に暑い！
+                      でも夜は風が気持ちよかったです。
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="tripflex">
-              <img src="../img/zunda.jpg" alt="ずんだシェイクの写真" />
-              <p>
-                初めてずんだシェイクをのんでみました。<br />
-                意外と甘めでおいしかった！結構並んだ
-              </p>
-            </div>
-            <div class="tripflex">
-              <img src="../img/gyutan.jpg" alt="牛タンの写真" />
-              <p>
-                念願の本場の牛タン！<br />
-                行くまでの過程もあってか めちゃめちゃ美味しかった！！！
-              </p>
-            </div>
-          </div>
-          <div>
-            <h2>みんなに共有ポイント</h2>
-            <p>
-              夜行バスは3列独立シートならストレスが少ないと思います！夏の仙台は普通に暑い！
-              でも夜は風が気持ちよかったです。
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="page">
-          <h2>ソロトリ</h2>
-          <p>
-            今回わたしが<span>10月</span>に<span>一泊二日</span>で行った場所は<br />
-            <span>石川県輪島市</span>です。<br />
-            行こうと思ったきっかけは<br />
-            <span>いつもと違う体験がしたかった</span>から！
-          </p>
+            <div class="swiper-slide">
+              <div class="page">
+                <h2>ソロトリ</h2>
+                <p>
+                  今回わたしが<span>10月</span>に<span>一泊二日</span>で行った場所は<br />
+                  <span>石川県輪島市</span>です。<br />
+                  行こうと思ったきっかけは<br />
+                  <span>いつもと違う体験がしたかった</span>から！
+                </p>
 
-          <div>
-            <h2>今回の旅のいろいろ</h2>
-            <div class="tripflex">
-              <img
-                src="../img/wajima 1.jpg"
-                alt="輪島塗り体験でつくったペンダント"
-              />
-              <p>
-                やってみたかった輪島塗で職人さんが優しく教えてくれたので安心してできた！<br />
-                細かく描くのは難しい。
-              </p>
-            </div>
-            <div class="tripflex">
-              <img src="../img/wajima2.jpg" alt="輪島キリコ会館の写真" />
-              <p>
-                これは輪島キリコ会館！能登のお祭りはタイミングが合わなかったので<br />
-                ここで祭り囃子を聞きながら巨大なキリコを見れてよかった！
-              </p>
-            </div>
-            <div class="tripflex">
-              <img src="../img/wajima3.jpg" alt="輪島朝市通りの入口" />
-              <p>
-                1200年の歴史があって日本三大朝市の輪島朝市！<br />
-                海鮮や干物、ちゃんと野菜もあってめぐるのが楽しかった！！！
-              </p>
+                <div>
+                  <h2>今回の旅のいろいろ</h2>
+                  <div class="tripflex">
+                    <img
+                      src="../img/wajima 1.jpg"
+                      alt="輪島塗り体験でつくったペンダント"
+                    />
+                    <p>
+                      やってみたかった輪島塗で職人さんが優しく教えてくれたので安心してできた！<br />
+                      細かく描くのは難しい。
+                    </p>
+                  </div>
+                  <div class="tripflex">
+                    <img src="../img/wajima2.jpg" alt="輪島キリコ会館の写真" />
+                    <p>
+                      これは輪島キリコ会館！能登のお祭りはタイミングが合わなかったので<br />
+                      ここで祭り囃子を聞きながら巨大なキリコを見れてよかった！
+                    </p>
+                  </div>
+                  <div class="tripflex">
+                    <img src="../img/wajima3.jpg" alt="輪島朝市通りの入口" />
+                    <p>
+                      1200年の歴史があって日本三大朝市の輪島朝市！<br />
+                      海鮮や干物、ちゃんと野菜もあってめぐるのが楽しかった！！！
+                    </p>
+                  </div>
+                </div>
+                <div>
+                  <h2>みんなに共有ポイント</h2>
+                  <p>
+                    10月の石川県は油断してると普通に寒いです。
+                    防寒はしっかりして行ってみてください！
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <h2>みんなに共有ポイント</h2>
-            <p>
-              10月の石川県は油断してると普通に寒いです。
-              防寒はしっかりして行ってみてください！
-            </p>
-          </div>
+          <!-- スライドの右の次に進むボタン（いらないなら消す） -->
+          <div class="swiper-button-next"></div>
+          <!-- スライドの左の一個前に戻るボタン（いらないなら消す） -->
+          <div class="swiper-button-prev"></div>
         </div>
       </div>
     </main>

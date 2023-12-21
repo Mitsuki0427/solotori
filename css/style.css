@@ -40,6 +40,9 @@ body {
 .header-area li {
   list-style: none;
 }
+.header-area a {
+  text-decoration: none;
+}
 /* ハンバーガーメニュー */
 .hbg-menu-btn {
   content: 'menu';
@@ -96,8 +99,9 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  width: 100%;
   z-index: 3;
+  width: 100vw;
+  height: 844px;
   transform: translateX(-100%);
 }
 .slide-menu li {
@@ -159,6 +163,7 @@ section.fv a {
   right: 20px;
   z-index: 1;
   color: #000000;
+  text-decoration: none;
 }
 section.about {
   margin: 128px 25px;
@@ -280,6 +285,7 @@ a.htu {
   line-height: 40px;
   margin: 10px 36px;
   border-radius: 10px;
+  text-decoration: none;
 }
 
 .instagram {
@@ -306,10 +312,11 @@ footer {
   margin: 40px 20px;
 }
 div.tab {
+  padding-top: 10px;
   margin-top: 72px;
   margin-left: 32px;
 }
-label.tab {
+.tab-btn {
   display: inline-block; /* インラインブロック化 */
   border-radius: 0.75em 0.75em 0px 0px; /* 左上と右上の角だけを丸くする */
   padding: 5px; /* 内側の余白量 */
@@ -318,15 +325,9 @@ label.tab {
   background-color: #fbd7e3; /* タブの(非選択状態の)背景色：灰色 */
   font-size: 13px;
 }
-label.tab input {
-  display: none;
-}
 
-/* ▼タブにマウスポインタが載った際の装飾 */
-label.tab:hover {
-  color: green; /* タブの文字色：緑色 */
-  background-color: #fbd7e3; /* タブの背景色：淡い緑色 */
-  cursor: pointer; /* マウスポインタの形状を「指(指し示す形)」にする */
+label.tab-btn input {
+  display: none;
 }
 
 /* ▼選択状態のタブ(＝チェックが入っているラジオボタンの隣にあるタブの装飾) */
@@ -336,7 +337,7 @@ label:checked + .tab {
 }
 .page {
   width: 337px;
-  height: 716px;
+  /* height: 716px; */
   padding: 10px 18px 30px;
   margin: 0 auto 50px;
   background-color: #fefcfd;
@@ -354,9 +355,9 @@ label:checked + .tab {
   color: #cb828d;
 }
 .bg {
-  background-image: linear-gradient(0deg, transparent 31px, #333 32px),
+  background-image: linear-gradient(0deg, transparent 31px, #cb828d 32px),
     linear-gradient(90deg, transparent 31px, #cb828d 32px);
-  background-color: #f8c1d4;
+  background-color: rgba(248, 193, 212, 0.5);
   background-size: 32px 32px;
 }
 .subtitle {
@@ -405,4 +406,36 @@ label:checked + .tab {
 }
 .box_swiper {
   transition-timing-function: linear;
+}
+
+.profile-main {
+  overflow-x: hidden;
+}
+
+.new-create {
+  width: 20%;
+  background-color: #aef0ff;
+  position: absolute;
+  top: 30%;
+  left: 40%;
+  padding: 20px;
+  border-radius: 50%;
+  border: none;
+  font-weight: 700;
+}
+
+.active-btn {
+  background-color: #f8c1d4;
+}
+.top-main {
+  overflow-x: hidden;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  z-index: 2;
+}
+h2.trip img {
+  width: 132px;
+  height: 132px;
 }
